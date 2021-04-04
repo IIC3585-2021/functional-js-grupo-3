@@ -8,5 +8,5 @@
 ## Integrantes
 
 - Macarena Concha
-- Cristobal Muñoz
+- Cristóbal Muñoz
 - Denisse Ogaz
