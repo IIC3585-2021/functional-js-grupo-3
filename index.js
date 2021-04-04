@@ -1,7 +1,10 @@
-const { init_game } = require('./src/init_game');
+const { play_game } = require('./src/play_game');
+const prompt = require('prompt-sync')({ sigint: true });
 
-//play_game()
-players = init_game(["Maca", "Denisse", "Cris"])
-console.log(players)
+const players = prompt('Ingrese el nombre de los jugadores: ').split(',');
+play_game(players)
 
-module.exports = { players }
+
+// play_game(['Cris', 'Maca', 'Denisse']);
+
+// module.exports = { players }
