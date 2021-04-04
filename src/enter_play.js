@@ -1,4 +1,4 @@
-function ingresar_jugada(player, plays) {
+function enter_play(player, plays) {
     // recibe nombre del jugador y lista de 3 plays
     const bulls = { 'DB': 50, 'SB': 25 };
     let score = 0;
