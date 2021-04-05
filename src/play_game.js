@@ -5,7 +5,7 @@ const { is_valid_plays, change_input } = require('./check_inputs');
 
 function play_game(players) {
   /* Recibe a los jugadores, inicializa y ejecuta el juego */
-    players = players.split(',').map((player) =>  player[0].toUpperCase() + player.slice(1).toLowerCase() )   
+    players = players.split(',').map((player) =>  player[0].toUpperCase() + player.slice(1).toLowerCase());   
     players = init_game(players);
     winner = find_winner(players, 0);
     console.log(`***** Gano el jugador ${winner} *****`);
@@ -23,7 +23,7 @@ function find_winner(players, turn) {
     Se ejecuta recursivamente hasta que alguien gana (llega a 0 puntos) 
     Retorna al ganador*/
     const name = Object.keys(players)[turn];
-    const jugada = ask_for_plays(name)
+    const jugada = ask_for_plays(name);
     const score = enter_play(players[name], JSON.parse("[" + jugada + "]"));
     // actualiza el puntaje del jugador
     players[name] = score;
