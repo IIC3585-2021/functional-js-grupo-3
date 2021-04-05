@@ -2,8 +2,6 @@ const { play_game } = require('./src/play_game');
 const { is_valid_players, change_input } = require('./src/check_inputs');
 const prompt = require('prompt-sync')({ sigint: true });
 
-
-
 const ask_for_players = () => {
     /* Pregunta por los jugadores
     Retorna la función que inicializa el juego si los inputs son válidos, si no vuelve a preguntar. */
@@ -12,7 +10,3 @@ const ask_for_players = () => {
 }
 
 ask_for_players()
-
-// play_game(['Cris', 'Maca', 'Denisse']);
-
-// module.exports = { players }
