@@ -1,10 +1,11 @@
-
-
 const compose = (f,g) => (x) => f(g(x));
-// Función que cambia el input. 
-// Los tipos definidos son {0: nombres jugadores, 1: jugadas}
+
 const change_input = (type) => {
+    /* Recibe el tipo de input
+    Los tipos definidos son {0: nombres jugadores, 1: jugadas} */
     return (input) => {
+        /* Recibe el input
+        Retorna el input sin espacios, y en caso de ser jugada con mayúscula. */
         input = input.replace(/ /g, "");
         return type === 0 ? input : input.toUpperCase().replace(/'/g, "\"");
     }

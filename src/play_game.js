@@ -12,6 +12,8 @@ function play_game(players) {
 }
 
 const ask_for_plays = (name) => {
+    /* Recibe el nombre del jugador actual.
+    Retorna la jugada si es válida, si no vuelve a preguntar */
     const play = change_input(1)(prompt(`>> Turno de ${name}. Ingrese la jugada: `));
     return is_valid_plays(play) ? play : (console.log("Formato inválido."), ask_for_plays(name));
 }
