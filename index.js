@@ -6,7 +6,7 @@ const start_game = () => {
     /* Pregunta por los jugadores
     Retorna la función que inicializa el juego si los inputs son válidos, si no vuelve a preguntar. */
     const players = change_input(0)(prompt('Ingrese el nombre de los jugadores: '));
-    return is_valid_players(players) ? play_game(players) : (console.log("Formato inválido."), ask_for_players());
+    return is_valid_players(players) ? play_game(players) : (console.log("Formato inválido."), start_game());
 }
 
 start_game();
