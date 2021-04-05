@@ -5,8 +5,8 @@ const { enter_play } = require('./enter_play');
 function play_game(players) {
     /* Recibe la lista de jugadores, inicializa y ejecuta el juego */
     players = init_game(players);
-    winner = find_winner(players, 0)
-    console.log(`***** Gano el jugador ${winner} *****`)
+    winner = find_winner(players, 0);
+    console.log(`***** Gano el jugador ${winner} *****`);
 }
 
 function find_winner(players, turn) {
@@ -18,7 +18,7 @@ function find_winner(players, turn) {
     const score = enter_play(players[name], JSON.parse("[" + jugada + "]"));
     // actualiza el puntaje del jugador
     players[name] = score;
-    console.log(`${name} queda con ${score} puntos.\n`)
+    console.log(`${name} queda con ${score} puntos.\n`);
     return is_winner(name, players) ? name : find_winner(players, Object.keys(players).length - 1 === turn ? 0 : turn + 1);
 }
 
