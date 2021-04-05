@@ -13,7 +13,9 @@ const change_input = (type) => {
 
 // Verificación de inputs de jugadas con regex. 
 const check_input_list = (play) => { return play = play.replace(/\[[123],[0-9]{1,2}\]/g, "") };
-const check_input_string = (play) => { return play = play.replace(/"[DS]B"/g, "") };
+const check_input_string = (play) => { 
+    return play = play.replace(/"[DS]B"/g, "").replace(/[Nn]ull/g, "") 
+};
 
 // Check cantidad de inputs entregados en las jugadas.
 const check_num_plays = (play) => { return ',,' === play ? true : false  };
